@@ -1,0 +1,260 @@
+$auto: auto;
+$colorBlack : #000000;
+$color-FFFFFF: #FFFFFF;
+$color-filter-by : #C3C4CA;
+$flex: flex;
+$column: column;
+$center: center;
+$font-bolder: bolder;
+$font-size-x-large: x-large;
+$font-style-normal: normal;
+$font-weight-lighter: lighter;
+$flex-wrap: wrap;
+$font-family-roboto : 'Roboto';
+$font-family-poppins: 'Poppins';
+$serif: serif;
+$color-080808: #080808;
+$space-between : space-between;
+$color-gray : gray;
+$color-gold: gold;
+$nowrap: nowrap;
+
+
+.container {
+  padding: 0 2rem;
+  background-color: $colorBlack;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: $flex;
+  flex-direction: $column;
+  justify-content: $center;
+  align-items: $center;
+}
+
+.title {
+  //position: absolute;
+  left: 0.28%;
+  right: 0.12%;
+  top: 0.41%;
+  bottom: 0.41%;
+  font-weight: $font-bolder;
+  font-size: $font-size-x-large;
+}
+
+.title,
+.description {
+  text-align: $center;
+  color: $color-FFFFFF;
+}
+
+.description {
+  margin: 4rem 0;
+  font-size: 64px;
+  font-style: $font-style-normal;
+  font-weight: 100;
+  line-height: 75px;
+  letter-spacing: 0em;
+  text-align: $center;
+
+}
+
+.grid {
+  display: $flex;
+  align-items: $center;
+  justify-content: $center;
+  flex-wrap: $flex-wrap;
+  max-width: 1000px;
+}
+
+//filter start
+.filter{
+  font-family: $font-family-roboto, $serif;
+  font-style: $font-style-normal;
+  font-weight: $font-style-normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-filter-by;
+  opacity: 0.5;
+
+}
+
+.filterExtend{
+  display: $flex;
+  margin-left: $auto;
+}
+
+.filterDiv{
+  @extend .filterExtend;
+  margin-right: 0;
+  width: 100%;
+}
+
+.filterChildDiv{
+  @extend .filterExtend;
+  align-items: $center;
+  margin-right: 20px;
+}
+
+//filter end
+.select{
+
+  width: 150px;
+  height: 45px;
+  border: solid 1px $color-080808 !important;
+  border-radius: 4px !important;
+  padding: 2px !important;
+  font-family: $font-family-roboto;
+  font-size: 14px !important;
+  min-height: $auto !important;
+  text-indent: 5px;
+  margin-left: 8px;
+  background-color: $colorBlack;
+  color: $color-FFFFFF;
+}
+
+.select option{color: $color-FFFFFF}
+
+
+// card start (buralar ayrı dosyalarda module css de yapılabilirdi, tek page çalıştığım için tercih etmedim.)
+
+.cardContainer{
+  display: $flex;
+  flex-direction: $column;
+  width: 300px;
+  height: 100%;
+  background: $colorBlack;
+  max-width: 300px;
+  margin: 15px;
+}
+
+
+.imageContainer{
+  width: 300px;
+  height: 300px;
+  background: gold;
+}
+
+
+//title container
+
+.titleContainer{
+  padding: 10px 20px;
+  display: $flex;
+  align-items: $center;
+  justify-content: $space-between;
+}
+
+.titleCard{
+  color: $color-FFFFFF;
+}
+
+.titleImageContainer{
+  width: 20px;
+  height: 40px;
+}
+
+//end
+
+
+//description
+
+.descriptionContainer{
+  padding: 10px 20px;
+  display: $flex;
+  align-items: $center;
+  justify-content: $space-between;
+}
+
+.descriptionName{
+  color: $color-FFFFFF;
+}
+
+
+.descriptionCategory{
+  color: $color-gray;
+}
+
+
+.descriptionCount{
+  color: $color-FFFFFF;
+  padding-left: 20px;
+}
+
+.descriptionType{
+  @extend .descriptionCategory;
+}
+
+//end
+
+//footer
+
+.footer{
+  padding: 10px 20px 20px 20px;
+}
+
+
+.footerTitle{
+  color: $color-gold;
+}
+
+
+
+.footerDescription{
+  @extend .descriptionCategory;
+}
+
+
+
+.footerButtonsContainer{
+  display: $flex;
+  align-items: $center;
+  justify-content: $space-between;
+}
+
+
+
+.footerButtonLeft{
+  background: $color-gold;
+  color: $colorBlack;
+  width: 100%;
+  height: 40px;
+  border: 1px solid $color-gold;
+  border-radius: 1px;
+  font-size: 12px;
+  padding: 0 20px;
+  white-space: $nowrap;
+  margin-right: 10px;
+}
+
+
+
+.footerButtonRight{
+  background: $colorBlack;
+  color: $color-gold;
+  width: 100%;
+  height: 40px;
+  border: 1px solid $color-gold;
+  border-radius: 1px;
+  font-size: 12px;
+  padding: 0 20px;
+  white-space: $nowrap;
+  margin-left: 10px
+}
+
+//end
+
+//card end
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: $column;
+  }
+}
+
+
+
